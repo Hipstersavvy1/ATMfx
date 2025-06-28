@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="MainPane" maxHeight="800.0" maxWidth="1200.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to right, #8E2DE2, #4A00E0);" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.atmfx.LoginController">
+   <children>
+      <Pane fx:id="pane3" layoutX="33.0" layoutY="275.0" prefHeight="100.0" prefWidth="533.0" style="-fx-background-radius: 15;">
+         <children>
+            <Button layoutY="5.0" mnemonicParsing="false" onAction="#actionPane1" prefHeight="90.0" prefWidth="100.0" style="-fx-background-radius: 15; -fx-background-color: white;" text="Transfer  &#10; Money">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font></Button>
+            <Button layoutX="107.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionPane2" prefHeight="90.0" prefWidth="100.0" style="-fx-background-radius: 15; -fx-background-color: white;" text="   Quick &#10;Withdraw">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font></Button>
+            <Button layoutX="324.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionPane3" prefHeight="90.0" prefWidth="100.0" style="-fx-background-radius: 15; -fx-background-color: white;" text="Change&#10;     Pin">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font></Button>
+            <Button fx:id="Exit_out" layoutX="430.0" layoutY="5.0" mnemonicParsing="false" onAction="#Exit_App" prefHeight="90.0" prefWidth="100.0" style="-fx-background-radius: 15; -fx-background-color: #E63946;" text="Exit" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="217.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionPane4" prefHeight="90.0" prefWidth="100.0" style="-fx-background-radius: 15; -fx-background-color: white;" text="     Mini &#10;Statement">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font></Button>
+         </children></Pane>
+      <Pane fx:id="pane4" layoutX="40.0" layoutY="65.0" prefHeight="200.0" prefWidth="250.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <children>
+            <Label fx:id="balance" layoutX="15.0" layoutY="102.0" prefHeight="29.0" prefWidth="180.0" text="Rs. ********">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="user_x" graphicTextGap="6.0" layoutX="15.0" layoutY="40.0" prefHeight="29.0" prefWidth="180.0" text="Username">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="balance11" graphicTextGap="6.0" layoutX="15.0" layoutY="20.0" prefHeight="29.0" prefWidth="180.0" text="What you would like today?" textFill="#727272">
+               <font>
+                  <Font name="Times New Roman" size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="balance111" graphicTextGap="6.0" layoutX="15.0" layoutY="85.0" prefHeight="29.0" prefWidth="180.0" text="Your Remaining Balance." textFill="#727272">
+               <font>
+                  <Font name="Times New Roman" size="10.0" />
+               </font>
+            </Label>
+            <Button fx:id="Trans" layoutX="130.0" layoutY="142.0" mnemonicParsing="false" onAction="#switch_trans" prefHeight="39.0" prefWidth="110.0" style="-fx-background-color: #4A00E0; -fx-background-radius: 10;" text="Cash Withdrawal" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="11.0" />
+               </font>
+            </Button>
+            <Button layoutX="14.0" layoutY="142.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="110.0" style="-fx-background-radius: 10;" text="Account Info" textFill="#170000">
+               <font>
+                  <Font name="Arial Bold" size="11.0" />
+               </font>
+            </Button>
+            <Button fx:id="show_balance" layoutX="185.0" layoutY="102.0" mnemonicParsing="false" onAction="#showBalance" style="-fx-background-color: white;" text="SHOW" textFill="#4918da" underline="true">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+         </children></Pane>
+      <Pane fx:id="pane2" layoutX="317.0" layoutY="65.0" prefHeight="200.0" prefWidth="250.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <children>
+            <TextField fx:id="Transfer_id" layoutX="50.0" layoutY="30.0" prefHeight="25.0" prefWidth="150.0" style="-fx-background-radius: 5;">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <Label fx:id="balance112" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="6.0" layoutX="-10.0" prefHeight="17.0" prefWidth="250.0" text="Transfer Money" textFill="#070000">
+               <font>
+                  <Font name="Times New Roman" size="10.0" />
+               </font>
+            </Label>
+            <TextField fx:id="Transfer_Amount" layoutX="50.0" layoutY="75.0" prefHeight="26.0" prefWidth="150.0" style="-fx-background-radius: 5;">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="Transfer_Pin" layoutX="50.0" layoutY="120.0" prefHeight="25.0" prefWidth="150.0" style="-fx-background-radius: 5;">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <Button fx:id="transferbutton" layoutX="50.0" layoutY="165.0" mnemonicParsing="false" onAction="#transfer_money" prefHeight="26.0" prefWidth="163.0" style="-fx-background-color: #4A00E0; -fx-background-radius: 10;" text="Transfer" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="11.0" />
+               </font>
+            </Button>
+            <Label alignment="BOTTOM_LEFT" layoutX="55.0" layoutY="110.0" prefHeight="11.0" prefWidth="163.0" text="PIN">
+               <font>
+                  <Font name="Times New Roman" size="10.0" />
+               </font>
+            </Label>
+            <Label alignment="BOTTOM_LEFT" layoutX="55.0" layoutY="65.0" prefHeight="11.0" prefWidth="163.0" text="Amount">
+               <font>
+                  <Font name="Times New Roman" size="10.0" />
+               </font>
+            </Label>
+            <Label alignment="BOTTOM_LEFT" layoutX="55.0" layoutY="20.0" prefHeight="11.0" prefWidth="163.0" text="Id">
+               <font>
+                  <Font name="Times New Roman" size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="Transfer_Error" alignment="BOTTOM_LEFT" layoutX="55.0" layoutY="147.0" prefHeight="11.0" prefWidth="163.0" textFill="#cd0909">
+               <font>
+                  <Font name="Arial Bold" size="10.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Pane fx:id="Loginpane" layoutX="200.0" layoutY="65.0" prefHeight="325.0" prefWidth="400.0">
+         <children>
+            <Label alignment="TOP_CENTER" layoutX="10.0" layoutY="15.0" prefHeight="30.0" prefWidth="180.0" text="Insert Your Card" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="t_user" layoutX="10.0" layoutY="85.0" prefHeight="30.0" prefWidth="180.0" promptText="Enter Your Id" style="-fx-background-radius: 9; -fx-text-fill: black;">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="t_pass" layoutX="11.0" layoutY="179.0" prefHeight="30.0" prefWidth="180.0" promptText="Enter your Password" style="-fx-background-radius: 9; -fx-text-fill: black;">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <Button contentDisplay="CENTER" graphicTextGap="3.0" layoutX="270.0" layoutY="274.0" mnemonicParsing="false" onAction="#LoginEnter" prefHeight="26.0" prefWidth="80.0" style="-fx-background-radius: 9;" text="Enter" textFill="#4a00e0">
+               <font>
+                  <Font name="Times New Roman" size="16.0" />
+               </font>
+            </Button>
+            <Label alignment="BOTTOM_LEFT" layoutX="20.0" layoutY="150.0" prefHeight="29.0" prefWidth="174.0" text="Password" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="BOTTOM_LEFT" layoutX="20.0" layoutY="55.0" prefHeight="29.0" prefWidth="174.0" text="ID" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="login_error" layoutX="25.0" layoutY="210.0" prefHeight="26.0" prefWidth="203.0" textFill="RED" />
+         </children>
+      </Pane>
+      <Pane fx:id="paneb" layoutX="317.0" layoutY="65.0" prefHeight="200.0" prefWidth="250.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <children>
+            <Label fx:id="select" alignment="CENTER" graphicTextGap="6.0" prefHeight="29.0" prefWidth="244.0" text="Select an amount">
+               <font>
+                  <Font name="Times New Roman Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="withdraw" layoutX="20.0" layoutY="155.0" mnemonicParsing="false" onAction="#withdraw_money" prefHeight="30.0" prefWidth="210.0" style="-fx-background-color: #4A00E0; -fx-background-radius: 10;" text=" Withdraw" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="11.0" />
+               </font>
+            </Button>
+            <RadioButton fx:id="c1" layoutX="10.0" layoutY="50.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="70.0" style="-fx-background-radius: 7; -fx-border-radius: 5; -fx-border-color: black; -fx-background-color: white;" text="500">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="Amountof" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="c2" layoutX="90.0" layoutY="50.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="70.0" style="-fx-background-radius: 7; -fx-border-radius: 5; -fx-border-color: black; -fx-background-color: white;" text="1000" toggleGroup="$Amountof">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="c3" layoutX="170.0" layoutY="50.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="70.0" style="-fx-background-radius: 7; -fx-border-radius: 5; -fx-border-color: black; -fx-background-color: white;" text="2500" toggleGroup="$Amountof">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="c4" layoutX="10.0" layoutY="100.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="70.0" style="-fx-background-radius: 7; -fx-border-radius: 5; -fx-border-color: black; -fx-background-color: white;" text="5000" toggleGroup="$Amountof">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="c5" layoutX="90.0" layoutY="100.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="70.0" style="-fx-background-radius: 7; -fx-border-radius: 5; -fx-border-color: black; -fx-background-color: white;" text="10000" toggleGroup="$Amountof">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="c6" layoutX="170.0" layoutY="100.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="70.0" style="-fx-background-radius: 7; -fx-border-radius: 5; -fx-border-color: black; -fx-background-color: white;" text="50000" toggleGroup="$Amountof">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </RadioButton>
+            <Label fx:id="qPin" graphicTextGap="6.0" layoutX="44.0" layoutY="51.0" prefHeight="29.0" prefWidth="180.0" text="PIN">
+               <font>
+                  <Font name="Arial Black" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="quick_Pin" layoutX="44.0" layoutY="80.0" prefHeight="26.0" prefWidth="174.0" />
+            <Button fx:id="confirmation" layoutX="37.0" layoutY="156.0" mnemonicParsing="false" onAction="#quick_confirm" prefHeight="29.0" prefWidth="188.0" style="-fx-background-color: #4A00E0; -fx-background-radius: 10;" text="Confirm" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="11.0" />
+               </font>
+            </Button>
+            <Label fx:id="quick_Error" graphicTextGap="6.0" layoutX="32.0" layoutY="132.0" prefHeight="26.0" prefWidth="180.0">
+               <font>
+                  <Font name="Arial Black" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="panec" layoutX="317.0" layoutY="55.0" prefHeight="200.0" prefWidth="250.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <children>
+            <Button fx:id="Change_pin" layoutX="33.0" layoutY="167.0" mnemonicParsing="false" onAction="#changePIN" prefHeight="26.0" prefWidth="188.0" style="-fx-background-color: #4A00E0; -fx-background-radius: 10;" text="Change" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="11.0" />
+               </font>
+            </Button>
+            <Label fx:id="m1" graphicTextGap="6.0" layoutX="50.0" layoutY="5.0" prefHeight="29.0" prefWidth="180.0" text="Current PIN">
+               <font>
+                  <Font name="Times New Roman Bold" size="11.0" />
+               </font>
+            </Label>
+            <TextField fx:id="current_pin" layoutX="45.0" layoutY="30.0" prefHeight="25.0" prefWidth="160.0" style="-fx-background-radius: 7; -fx-border-color: black; -fx-border-radius: 7;" />
+            <Label fx:id="m3" graphicTextGap="6.0" layoutX="50.0" layoutY="100.0" prefHeight="17.0" prefWidth="180.0" text="Confirm">
+               <font>
+                  <Font name="Times New Roman Bold" size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="m2" graphicTextGap="6.0" layoutX="50.0" layoutY="57.0" prefHeight="17.0" prefWidth="180.0" text="New PIN">
+               <font>
+                  <Font name="Times New Roman Bold" size="11.0" />
+               </font>
+            </Label>
+            <TextField fx:id="pin1" layoutX="45.0" layoutY="72.0" prefHeight="25.0" prefWidth="160.0" style="-fx-background-radius: 7; -fx-border-color: black; -fx-border-radius: 7;" />
+            <TextField fx:id="pin2" layoutX="45.0" layoutY="115.0" prefHeight="25.0" prefWidth="160.0" style="-fx-background-radius: 7; -fx-border-color: black; -fx-border-radius: 7;" />
+            <Label fx:id="change_error_msg" graphicTextGap="6.0" layoutX="56.0" layoutY="143.0" prefHeight="17.0" prefWidth="180.0" textFill="RED">
+               <font>
+                  <Font name="Times New Roman Bold" size="11.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="pane_trans" layoutX="317.0" layoutY="65.0" prefHeight="200.0" prefWidth="250.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <children>
+            <Button fx:id="withdraw_money" layoutX="33.0" layoutY="160.0" mnemonicParsing="false" onAction="#withdraw_Amount" prefHeight="30.0" prefWidth="175.0" style="-fx-background-color: #4A00E0; -fx-background-radius: 10;" text="Withdraw" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="11.0" />
+               </font>
+            </Button>
+            <Label fx:id="l1" graphicTextGap="6.0" layoutX="50.0" layoutY="22.0" prefHeight="29.0" prefWidth="180.0" text="Amount">
+               <font>
+                  <Font name="Times New Roman Bold" size="11.0" />
+               </font>
+            </Label>
+            <TextField fx:id="trans_amount" layoutX="45.0" layoutY="45.0" prefHeight="25.0" prefWidth="160.0" style="-fx-background-radius: 7; -fx-border-color: black; -fx-border-radius: 7;" />
+            <Label fx:id="l2" graphicTextGap="6.0" layoutX="50.0" layoutY="95.0" prefHeight="17.0" prefWidth="180.0" text="PIN">
+               <font>
+                  <Font name="Times New Roman Bold" size="11.0" />
+               </font>
+            </Label>
+            <TextField fx:id="wit_Pin" layoutX="45.0" layoutY="110.0" prefHeight="25.0" prefWidth="160.0" style="-fx-background-radius: 7; -fx-border-color: black; -fx-border-radius: 7;" />
+            <Label fx:id="error_trans" graphicTextGap="6.0" layoutX="50.0" layoutY="140.0" prefHeight="17.0" prefWidth="150.0" textFill="RED">
+               <font>
+                  <Font name="Times New Roman Bold" size="11.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ImageView fitHeight="39.0" fitWidth="80.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Logo.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="dxt_tmt" alignment="CENTER_RIGHT" graphicTextGap="3.0" layoutX="373.0" prefHeight="39.0" prefWidth="225.0" text="Date" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="15.0" />
+         </font>
+      </Label>
+      <ScrollPane fx:id="paned" layoutX="20.0" layoutY="50.0" prefHeight="340.0" prefWidth="560.0" style="-fx-background-radius: 20;">
+         <content>
+            <AnchorPane fx:id="minis" minHeight="0.0" minWidth="0.0" prefHeight="335.0" prefWidth="558.0" style="-fx-background-radius: 20;" />
+         </content>
+      </ScrollPane>
+
+   </children>
+</AnchorPane>
