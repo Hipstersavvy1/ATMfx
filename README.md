@@ -31,7 +31,7 @@ The application follows a **monolithic architecture**, where both the **database
 
 1. Clone the repository:
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/CodeAvecAsnit/ATMfx.git
 2.  Open the project in your Java IDE.
 3.  Run the `ATM.java` file.
 
