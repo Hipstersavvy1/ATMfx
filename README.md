@@ -35,29 +35,56 @@ The application follows a **monolithic architecture**, where both the **database
 2.  Open the project in your Java IDE.
 3.  Run the `ATM.java` file.
 
-### This version includes an explanation of how the application operates and handles the core features through SQL queries. Let me know if you'd like to make further adjustments!
-
 
 ## Screenshots
 
-#### Login Page
-<img src="screenshots/LoginPage.png">
- <caption>After logging in with valid credentials the program navigates us to the landing page</caption>
+### Login Page
+![Login Page](screenshots/LoginPage.png)
+*After logging in with valid credentials, the application navigates to the landing page.*
 
+---
 
-#### Landing Page
-<img src="screenshots/LandingPage.png">
-<caption>The Landing page allows us to navigate through different features of the ATM. 
-The balance in initially hidden. This interface allows user to navigate through different features of this application.</caption>
+### Landing Page
+![Landing Page](screenshots/LandingPage.png)
+*The landing page serves as the main dashboard, allowing users to access different ATM features. The account balance is initially hidden for privacy.*
 
-#### Amount Withdraw
-<img src="screenshots/AmountWithdrawl.png">
-<caption>The user is able to withdraw any amount of money from his account. The changes are reflected in the database.</caption>
+---
 
-#### Quick Withdraw
-<img src="screenshots/QuickWithdrawl.png">
-<caption>The user is able to withdraw money from his account. The amounts of money that the user can withdraw is reflected through user's interface</caption>
+### Amount Withdrawal
+![Amount Withdrawal](screenshots/AmountWithdrawl.png)
+*Users can withdraw any valid amount from their account. The updated balance is reflected in the database in real time.*
+
+---
+
+### Quick Withdrawal
+![Quick Withdrawal](screenshots/QuickWithdrawl.png)
+*This feature allows users to withdraw predefined amounts instantly. The options are displayed in the user interface for quick access.*
+
+---
 
 ### Transfer Money
-<img src="screenshots/TransferMoney.png">
-<caption>As we can see the previous operation of Withdraw money has made some changes here.</caption>
+![Transfer Money](screenshots/TransferMoney.png)
+*This feature enables users to transfer a custom amount to another user. In this example, User ID 23081050 transfers ₹5000 to User ID 23081033. This operation is handled through database triggers, ensuring seamless updates.*
+
+#### Before Transfer
+![Before Transfer](screenshots/BeforeTransfer.png)
+*Before the transfer: TestUser has Rs5,50,000, and Rishav has Rs35,000.*
+
+#### After Transfer
+![After Transfer](screenshots/AfterTransfer.png)
+*After the transfer: The updated balances reflect the ₹5000 transfer, automatically processed by the trigger — without requiring complex backend logic.*
+
+---
+
+### Change PIN
+![Change PIN](screenshots/ChangePin.png)
+*Users can securely change their PIN. A key feature for account safety and access control.*
+
+![Change PIN Result](screenshots/ChangePinResult.png)
+*The database reflects the updated PIN. In this example, TestUser's PIN has changed from 4321 to 5005.*
+
+---
+
+### Mini Statement
+![Dynamic Statement Generation](screenshots/DynamicStateGenertation.png)
+*This was the most technically challenging part of the application. The dynamically generated statement is displayed in a scrollable pane, which required precise control of label coordinates and layout logic. It was a rewarding challenge as a beginner working with JavaFX.*
