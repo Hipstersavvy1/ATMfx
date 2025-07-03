@@ -37,3 +37,27 @@ The application follows a **monolithic architecture**, where both the **database
 
 ### This version includes an explanation of how the application operates and handles the core features through SQL queries. Let me know if you'd like to make further adjustments!
 
+
+## Screenshots
+
+#### Login Page
+<img src="screenshots/LoginPage.png">
+ <caption>After logging in with valid credentials the program navigates us to the landing page</caption>
+
+
+#### Landing Page
+<img src="screenshots/LandingPage.png">
+<caption>The Landing page allows us to navigate through different features of the ATM. 
+The balance in initially hidden. This interface allows user to navigate through different features of this application.</caption>
+
+#### Amount Withdraw
+<img src="screenshots/AmountWithdrawl.png">
+<caption>The user is able to withdraw any amount of money from his account. The changes are reflected in the database.</caption>
+
+#### Quick Withdraw
+<img src="screenshots/QuickWithdrawl.png">
+<caption>The user is able to withdraw money from his account. The amounts of money that the user can withdraw is reflected through user's interface</caption>
+
+### Transfer Money
+<img src="screenshots/TransferMoney.png">
+<caption>As we can see the previous operation of Withdraw money has made some changes here.</caption>
