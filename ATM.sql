@@ -34,11 +34,11 @@ Foreign key(ReceiverId) references BankUsers(UserId)
 
 -- Test Users--
 
-insert into bankUsers
-values("23081050","Test User”,"testing",5500000,6969);
+insert into BankUsers
+values('23081050', 'Test User', 'testing', 5500000, 6969);
 
 insert into bankUsers
-values("23081049","Dummy User”,"IamDUMMY",2000000,6789);
+values('23081049','Dummy User','IamDUMMY',2000000,6789);
 
 -- add some Procedures
 
